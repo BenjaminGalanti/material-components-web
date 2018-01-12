@@ -48,7 +48,7 @@
   // Outline specific colors
   @include mdc-text-field-outline-stroke-color($mdc-text-field-outlined-idle-border);
   @include mdc-text-field-hover-outline-stroke-color($mdc-text-field-outlined-hover-border);
-  @include mdc-text-field-focus-outline-stroke-color(primary);
+  @include mdc-text-field-focused-outline-stroke-color(primary);
 
   display: inline-block;
   position: relative;

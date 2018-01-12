@@ -130,7 +130,7 @@
   // Outline specific mixins
   @include mdc-text-field-outline-stroke-color($mdc-text-field-error-on-light);
   @include mdc-text-field-hover-outline-stroke-color($mdc-text-field-error-on-light);
-  @include mdc-text-field-focus-outline-stroke-color($mdc-text-field-error-on-light);
+  @include mdc-text-field-focused-outline-stroke-color($mdc-text-field-error-on-light);
 
   + .mdc-text-field-helper-text--validation-msg {
     opacity: 1;

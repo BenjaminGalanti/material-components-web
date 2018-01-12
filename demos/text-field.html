@@ -277,7 +277,7 @@
         </script>
       </section>
 
-      <section class="example">
+      <section class="example" id="demo-tf-icon-container">
         <h2>Text Field - Leading/Trailing icons</h2>
         <div id="demo-tf-box-leading-wrapper">
           <div id="tf-box-leading-example"
@@ -344,6 +344,10 @@
         <div>
           <input id="unclickable-leading-trailing" type="checkbox">
           <label for="unclickable-leading-trailing">Unclickable icons</label>
+        </div>
+        <div>
+          <input id="required-leading-trailing" type="checkbox">
+          <label for="required-leading-trailing">Required</label>
         </div>
       </section>
 
@@ -475,6 +479,8 @@
     </script>
     <script>
       setTimeout(function() {
+        var tfIconContainer = document.getElementById('demo-tf-icon-container');
+
         var tfBoxLeadingEl = document.getElementById('tf-box-leading-example');
         var tfBoxLeading = new mdc.textField.MDCTextField(tfBoxLeadingEl);
         var wrapperBoxLeading = document.getElementById('demo-tf-box-leading-wrapper');
@@ -542,6 +548,12 @@
           });
         });
 
+        document.getElementById('required-leading-trailing').addEventListener('change', function(evt) {
+          tfIconContainer.querySelectorAll('.mdc-text-field__input')
+              .forEach(function(input) {
+                input.required = evt.target.checked;
+              });
+        });
       }, 0);
     </script>
     <script>

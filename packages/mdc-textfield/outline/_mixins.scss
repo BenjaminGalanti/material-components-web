@@ -28,9 +28,9 @@
   }
 }
 
-@mixin mdc-text-field-focus-outline-stroke-color($color) {
+@mixin mdc-text-field-focused-outline-stroke-color($color) {
   &:not(.mdc-text-field--disabled) {
-    @include mdc-text-field-focus-outline-stroke-color_($color);
+    @include mdc-text-field-focused-outline-stroke-color_($color);
   }
 }
 
@@ -53,7 +53,7 @@
   }
 }
 
-@mixin mdc-text-field-focus-outline-stroke-color($color) {
+@mixin mdc-text-field-focused-outline-stroke-color_($color) {
   &.mdc-text-field--focused .mdc-text-field__outline-path {
     @include mdc-theme-prop(stroke, $color);
   }
