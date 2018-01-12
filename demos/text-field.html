@@ -181,8 +181,8 @@
           <label for="outlined-rtl">RTL</label>
         </div>
         <div>
-          <input id="outlined-dark-theme" type="checkbox">
-          <label for="outlined-dark-theme">Dark Theme</label>
+          <input id="outlined-custom-colors" type="checkbox">
+          <label for="outlined-custom-colors">Alternate Colors</label>
         </div>
         <div>
           <input id="outlined-dense" type="checkbox">
@@ -204,8 +204,9 @@
               }
               tf.layout();
             });
-            document.getElementById('outlined-dark-theme').addEventListener('change', function(evt) {
-              wrapper.classList[evt.target.checked ? 'add' : 'remove']('mdc-theme--dark');
+            document.getElementById('outlined-custom-colors').addEventListener('change', function(evt) {
+              tfEl.classList[evt.target.checked ? 'add' : 'remove']('demo-text-field-custom-colors');
+              tfEl.classList[evt.target.checked ? 'add' : 'remove']('demo-text-field-custom-error-colors');
             });
             document.getElementById('outlined-dense').addEventListener('change', function(evt) {
               tfEl.classList[evt.target.checked ? 'add' : 'remove']('mdc-text-field--dense');
