@@ -113,6 +113,9 @@
 }
 
 .mdc-text-field--outlined {
+  @include mdc-text-field-input-hover-outline-stroke-color($mdc-text-field-outlined-hover-border);
+  //@include mdc-text-field-icon-hover-outline-stroke-color($mdc-text-field-outlined-hover-border);
+
   height: 56px;
   border: none;
 
@@ -127,7 +130,7 @@
     z-index: 1;
 
     &:hover ~ .mdc-text-field__idle-outline {
-      border: 1px solid $mdc-text-field-outlined-hover-border;
+      border: 1px solid;
     }
   }
 
@@ -172,9 +175,9 @@
   }
 
   &:not(.mdc-text-field--invalid) {
-    &.mdc-text-field--focused .mdc-text-field__label {
-      @include mdc-theme-prop(color, primary);
-    }
+    //&.mdc-text-field--focused .mdc-text-field__label {
+    //  @include mdc-theme-prop(color, primary);
+    //}
 
     // stylelint-disable-next-line selector-max-specificity
     &:not(.mdc-text-field--focused) .mdc-text-field__input:hover ~ .mdc-text-field__outline .mdc-text-field__outline-path {
